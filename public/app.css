@@ -1,0 +1,65 @@
+/* We put our css inside of the public folder, which is the convention. */
+
+body {
+    /* color: purple; */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    color: rgb(66,69,86);
+    background-image: url('http://i.imgur.com/BJP2Q1j.jpg');
+    background-size: cover;
+    font-weight: 100;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 500px;
+    line-height: 400px;
+    font-weight: 100;
+}
+
+p {
+    margin: 0;
+    font-size: 50px;
+}
+
+.form {
+    line-height: 1.5;
+    border: none;
+    border-bottom: 3px solid #ebebeb;
+    margin-top: 100px;
+    width: 700px;
+    font-size: 2.9em;
+    color: white;
+    padding: 5px 10px;
+    background: transparent;
+}
+
+button {
+    line-height: 2.0;
+    /* border: none; */
+    border: 3px solid white;
+    font-size: 1.9em;
+    color: rgb(66,69,86);
+    padding: 5px 30px;
+    background: rgba(255,255,255,1.0);
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+/* When an input of type="text" is focused, when someone clicks on it, there should be no outline. */
+input[type=text]:focus {
+    outline: none;
+}
+
+/* This is for Chrome, Opera, and Safari.  This is a CSS 3 browser specific way of doing this.  We are targetting the input placeholder text and we are setting the color to be slightly see through. */
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.8);
+}

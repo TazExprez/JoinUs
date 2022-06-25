@@ -1,0 +1,29 @@
+<h1>JOIN US</h1>
+
+<!-- <h1><%= 4 * 98 %></h1>
+<h1><%= favorite_color %></h1> -->
+
+<!-- Here we put data inside of <%= %> in order to say that this is not HTML, but code, and should be treated differently from HTML.  This is a signifier that says that this is not HTML.  Whatever is in here is going to return a value that we want to put inside of the HTML. -->
+<p>Enter your email to join <strong><%=count%></strong> others on our waitlist.  We are 100% not a cult. </p>
+
+<!-- The method states that when we hit the submit button in the form, it will be submitted using a POST request.  You can write POST all uppercase, or all lower case, and it does not matter.  We will send the POST request to the route in the action, which is /register.  We will have to create the page in the /register route because it does not exist yet.  When we try to go to a page that does not exist, we will get an error.  In this case the error is "Cannot POST /register". -->
+<!-- <form method="POST" action="/register">
+    <input type="text" class="form" placeholder="Enter Your Email">
+    <button>Join Now</button>
+</form> -->
+<!-- Now we are doing a GET request to the /joke route.  When we submit this form, we are going to send the data to the /joke route as a GET request.  When we try to submit the data, our data isn't being sent.  You will notice that there is a ? after /joke in the address bar.  Our data isn't being sent because we're not giving it a name to be sent under. -->
+<!-- <form method="GET" action="/joke">
+    <input type="text" class="form" placeholder="Enter Your Email">
+    <button>Join Now</button>
+</form> -->
+<!-- Now we can actually send the data from this form via a GET request.  The data will be appended to the /joke and this will be /joke?email=blah%40gmail.com.  The %40 is for the @ symbol.  We are sending blah@gmail.com to the /joke route.  We can do this with a GET request and append the value, in this case name, with the ?.  This is not common, though, and a POST request is normally used to send data to a database server. The stuff after the ? is a query string.  If we are doing a search form, then a GET request with a query string makes sense, but in most cases, it is not a good practice. -->
+<!-- <form method="GET" action="/joke"> -->
+    <!-- Here we gave our <input> a name attribute.  This will be the label for whatever we put inside of this <input>.  The best we can call it is email, since that is what it expects from users.  Whenever the data is sent by the form, it will be referred to as email.  We only need one piece of data.  If our form took in more fields, then each one would have a name attribute. -->
+    <!-- <input type="text" name="email" class="form" placeholder="Enter Your Email">
+    <button>Join Now</button>
+</form> -->
+<!-- We need to create a /register route that will listen for POST requests. -->
+<form method="POST" action="/register">
+    <input type="text" name="email" class="form" placeholder="Enter Your Email">
+    <button>Join Now</button>
+</form>

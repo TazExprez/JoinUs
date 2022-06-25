@@ -1,0 +1,23 @@
+<!-- We added <head> and <body>, but did not have to because the browser would add these automatically, but this is a best practice.  It is best not to rely on a browswer to do this. -->
+<head>
+    <!-- Colt also included a font from Google. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400">
+    <!-- After doing the app.use(express.static(__dirname + "/public")); method in the app.js file, the app.css stylesheet will be available to this file. -->
+    <!-- If we had multiple views, one way to share this app.css stylesheet among them is by putting this line in all of the files.  A better way would be to use partials, where you could have code that would run on all of your views.  You could also have a separate stylesheet for each view and just put each one in the public folder. -->
+    <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="container">
+            <h1>JOIN US</h1>
+    
+            <p>Enter your email to join <strong><%=count%></strong> others on our waitlist.  We are 100% not a cult. </p>
+    
+            <form method="POST" action="/register">
+                <input type="text" name="email" class="form" placeholder="Enter Your Email">
+                <button>Join Now</button>
+            </form>
+        </div>
+    </div>
+</body>
